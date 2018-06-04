@@ -1,0 +1,175 @@
+body {
+    // overflow: hidden;
+}
+
+.container {
+}
+
+.firstPage { 
+    height: 100vh;
+    background: url('../img/background-hogwarts.jpg') no-repeat center center fixed;
+    transition: 1s;
+    &-title {
+        width: 100%;
+        font-size: 150px;
+        color: #fdba00;
+        font-family: 'harry p';
+        text-align: center;
+        padding-top: 250px;
+    }
+    &-button {
+        font-size: 30px;
+        text-transform: uppercase;
+        position: absolute;
+        font-family: 'new';
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -70%);
+        border: 1px solid #fff;
+        color: #fff;
+        text-decoration: none;
+        padding: 30px 40px 20px 40px;
+        transition: 0.7s;
+        cursor: pointer;
+    }
+    &-button:hover {
+        background: #000;
+    }
+    &-broom{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 250px;
+        height: 250px;
+        transform: rotate(20deg) translate(200px);
+        transition: 2s;
+    }
+    .active{
+        transform: rotate(20deg) translateX(1000px);
+    }
+}
+
+.gender {
+    height: 100vh;
+    background: url('../img/background-gender.jpg') no-repeat center center fixed;
+    background-size: cover;
+    transition: 1s;
+    &-title {
+        font-size: 80px;
+        font-family: 'harry p';
+        text-align: center;
+        padding-top: 100px;
+        color: #fdba00;
+    }
+    &-imgContainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    &-img {
+        cursor: pointer;
+        width: 30%;
+        transition: 1s;
+        fill: #fff;
+    }
+}
+
+.house {
+    height: 100vh;
+    background: #000;
+    transition: 1s;
+    &-title {
+        font-size: 80px;
+        font-family: 'harry p';
+        text-align: center;
+        padding-top: 50px;
+        color: #fdba00;
+    }
+    &-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 20px;
+    }
+    .--houses {
+        width: 323px;
+        cursor: pointer;
+        transition: 1s;
+    }
+    &-slytherinSvg {
+        background: #005D4B;
+        padding-left: 170px;
+    }
+    &-ravenclawSvg {
+        background: #21326A;
+        padding-left: 200px;
+    }
+    &-gryffindorSvg {
+        background: #D45149;
+        padding-left: 170px;
+    }
+    &-hufflepuffSvg {
+        background: #FDB82D;
+        padding-left: 200px;
+    }
+    .--backgroundAnim {
+        transition: 2s;
+        z-index: 100;
+    }
+}
+
+
+
+.story {
+    height: 100vh;
+    background: url('../img/background-house.jpg')no-repeat center center;
+    background-size: cover;
+    transition: 1s;
+    position: relative;
+    &-container{
+        transition: 2s;
+    }
+    &-title {
+        text-align: center;
+        font-size: 70px;
+        font-family: 'chesterfield LT Std Antique';
+        padding-top: 300px;
+    }
+    &-hero{
+        text-align: center;
+        font-size: 100px;
+        font-family: 'harry p';
+        letter-spacing: 5px;
+        padding-top: 100Px;
+    }
+    &-content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        transition: 1s;
+        opacity: 0;
+        font-size: 70px;
+        font-family: 'chesterfield LT Std Antique';
+        text-align: center;
+        line-height: 100px;
+        letter-spacing: 4px;
+    }
+}
+
+@keyframes opacity {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes opacity2 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

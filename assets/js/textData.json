@@ -1,0 +1,48 @@
+{
+    "gender": {
+        "man": {
+            "intro":"Once upon a time , there was a young boy named",
+            "ravenclaw": {
+              "title" : "Garrick Olivander",
+              "description": "Considered by many to be the world's best wandmaker, almost everyone at Hogwarts gets their wands from him"
+            },
+            "slytherin": {
+                "title" : "Salazar Slytherin",
+                "description": "You might recognize his last name because he is 🖕🖕🖕🖕🖕"
+
+            },
+            "gryffindor": {
+                "title" : "Sirius Black",
+                "description": "Considered by many to be the world's best wandmaker, almost everyone at Hogwarts gets their wands from him"
+
+            },
+            "hufflepuff": {
+                "title" : "Newt Scamander",
+                "description": "Considered by many to be the world's best wandmaker, almost everyone at Hogwarts gets their wands from him"
+
+            }
+        },
+        "woman": {
+            "intro":"Once upon a time , there was a young girl named ",
+            "ravenclaw": {
+                "title" : "Luna Lovegood",
+                "description": "Considered by many to be the world's best wandmaker, almost everyone at Hogwarts gets their wands from him"
+            },
+            "slytherin": {
+                "title" : "Bellatrix Lestrange",
+                "description": "Considered by many to be the world's best wandmaker, almost everyone at Hogwarts gets their wands from him"
+
+            },
+            "gryffindor": {
+                "title" : "Minerva McGonagall",
+                "description": "Considered by many to be the world's best wandmaker, almost everyone at Hogwarts gets their wands from him"
+
+            },
+            "hufflepuff": {
+                "title" : "Nymphadora Tonks",
+                "description": "Considered by many to be the world's best wandmaker, almost everyone at Hogwarts gets their wands from him"
+
+            }
+        }
+    }
+}
