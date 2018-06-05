@@ -115,9 +115,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
     transition: 1s;
     opacity: 0;
-    font-size: 70px;
+    font-size: 50px;
     font-family: 'chesterfield LT Std Antique';
     text-align: center;
     line-height: 100px;

@@ -106,8 +106,7 @@ for (let i = 0; i < dom.houses.length; i++) {
     dom.houses[i].addEventListener('click', function () {
         smoothScroll(dom.story);
         houseStorage(i);
-        appelData();
-        
+        callData();
     });
 }
 
@@ -143,7 +142,7 @@ function hoverOutHouses(goodbye) {
 const dataStory = 'assets/js/textData.json';
 
 
-function appelData() {
+function callData() {
 
 
     fetch(dataStory)
@@ -154,42 +153,42 @@ function appelData() {
             console.log(data);
             if (localStorage.getItem('gender') === 'male' && localStorage.getItem('house') === 'slytherin') {
                 addName(data.gender.man.intro , data.gender.man.slytherin.title);
-                addText(data.gender.man.slytherin.description);
+                addText(data.gender.man.slytherin.firstText);
             } 
             
             else if (localStorage.getItem('gender') === 'male' && localStorage.getItem('house') === 'ravenclaw') {
                 addName(data.gender.man.intro , data.gender.man.ravenclaw.title);
-                addText(data.gender.man.ravenclaw.description);
+                addText(data.gender.man.ravenclaw.firstText);
             } 
             
             else if (localStorage.getItem('gender') === 'male' && localStorage.getItem('house') === 'gryffindor') {
                 addName(data.gender.man.intro , data.gender.man.gryffindor.title);
-                addText(data.gender.man.gryffindor.description);
+                addText(data.gender.man.gryffindor.firstText);
             } 
             
             else if (localStorage.getItem('gender') === 'male' && localStorage.getItem('house') === 'hufflepuff') {
                 addName(data.gender.man.intro , data.gender.man.hufflepuff.title);
-                addText(data.gender.man.hufflepuff.description);
+                addText(data.gender.man.hufflepuff.firstText);
             } 
             
             else if (localStorage.getItem('gender') === 'female' && localStorage.getItem('house') === 'slytherin') {
                 addName(data.gender.woman.intro , data.gender.woman.slytherin.title);
-                addText(data.gender.woman.slytherin.description);
+                addText(data.gender.woman.slytherin.firstText);
             } 
             
             else if (localStorage.getItem('gender') === 'female' && localStorage.getItem('house') === 'ravenclaw') {
                 addName(data.gender.woman.intro , data.gender.woman.ravenclaw.title);
-                addText(data.gender.woman.ravenclaw.description);
+                addText(data.gender.woman.ravenclaw.firstText);
             } 
             
             else if (localStorage.getItem('gender') === 'female' && localStorage.getItem('house') === 'gryffindor') {
                 addName(data.gender.woman.intro , data.gender.woman.gryffindor.title);
-                addText(data.gender.woman.gryffindor.description);
+                addText(data.gender.woman.gryffindor.firstText);
             } 
             
             else if (localStorage.getItem('gender') === 'female' && localStorage.getItem('house') === 'hufflepuff') {
                 addName(data.gender.woman.intro , data.gender.woman.hufflepuff.title);
-                addText(data.gender.woman.hufflepuff.description);
+                addText(data.gender.woman.hufflepuff.firstText);
             }
             
         })
@@ -219,7 +218,7 @@ function addText(descrip){
     p.innerHTML = descrip;
     dom.story.appendChild(p);
     setTimeout(function(){
+        p.style.transition = '4s';
         p.style.opacity = '1';
-        document.body.style.overflowY('scroll');
     }, 8000);
 }
