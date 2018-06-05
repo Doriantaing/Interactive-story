@@ -157,6 +157,7 @@ function callData() {
                 secondText(data.gender.man.slytherin.secondText);
                 endText();
                 survey();
+
             } 
             
             else if (localStorage.getItem('gender') === 'male' && localStorage.getItem('house') === 'ravenclaw') {
@@ -295,7 +296,7 @@ function survey(){
     surveyContainer.appendChild(buttonNo);
 
     buttonYes.addEventListener('click',function(){
-        
+        console.log("caca");
     })
 
 
