@@ -4,44 +4,49 @@
             "intro":"Once upon a time , there was a young boy named",
             "ravenclaw": {
               "title" : "Garrick Olivander",
-              "description": "Considered by many to be the world's best wandmaker, almost everyone at Hogwarts gets their wands from him"
+              "firstText": "Born to a wizard and a muggle-born , <br/> Garrick Ollivander went to <br/> Hogwarts School of Witchcraft and Wizardry <br/> and was sorted into the Ravenclaw House",
+              "secondText": "Renowned wandmaker Mr Ollivander owned the wand shop in Diagon Alley and gave their wands to many of the most powerful wizards"
             },
             "slytherin": {
                 "title" : "Salazar Slytherin",
-                "description": "You might recognize his last name because he is 🖕🖕🖕🖕🖕"
-
+                "firstText": "If his last name sounds familiar , <br/> it is because he is one of the founders of <br/> Hogwarts School of Witchcraft and Wizardry .He was considered as one of the greatest wizards of his time and was parseltongue<br/> ",
+                "secondText": "But he had a disagreement with the others founders of Hogwarts which was that he believed that magic was only for pure blood wizards and he had to leave hogwarts ."
             },
             "gryffindor": {
                 "title" : "Sirius Black",
-                "description": "Considered by many to be the world's best wandmaker, almost everyone at Hogwarts gets their wands from him"
+                "firstText": "Born in the Black family , he was born into a family that truly believed in blood purity but he defied that when he was sorted into Gryffondor house. Since that day he was considered like an odd one by his own family",
+                "secondText": " Betrayed and framed by his own friend for the <br/> death of the Potters , he was sent to Azkaban <br/>until 12 years later where he became the first person <br/> to escape the prison. After the truth came out , he became a real mentor to Harry Potter until he was murdered by his own cousin Bellatrix Lestrange "
 
             },
             "hufflepuff": {
                 "title" : "Newt Scamander",
-                "description": "Considered by many to be the world's best wandmaker, almost everyone at Hogwarts gets their wands from him"
-
+                "firstText": "From his early age , he was always interested in magical creature . Later , he went to Hogwarts and was sorted into Hufflepuff where he enjoyed studying magical creatures.",
+                "secondText": "He is not the most famous wizard but he was a <br/> famous magizoologist and the author of 'Fantastic Beasts and Where to Find Them'."
             }
         },
         "woman": {
             "intro":"Once upon a time , there was a young girl named ",
             "ravenclaw": {
                 "title" : "Luna Lovegood",
-                "description": "Considered by many to be the world's best wandmaker, almost everyone at Hogwarts gets their wands from him"
+                "firstText": "She had a tragic childhood as a mother died when she was 9 , so she was raised by her father . She attend Hogwarts and she joined the Army of Dumbledore alongside Harry Potter in her fourth year",
+                "secondText": "Because of her father's political opinion at the time, Luna was kidnapped by Death Eaters to be held ransom, and imprisoned in the dungeons of Malfoy Manor for months until she was freed by Dobby. Later , she participated in the final battle of the Second Wizarding War"
             },
             "slytherin": {
                 "title" : "Bellatrix Lestrange",
-                "description": "Considered by many to be the world's best wandmaker, almost everyone at Hogwarts gets their wands from him"
+                "firstText": "She started her education at Hogwarts School of Witchcraft and Wizardry and was sorted into the Slytherin House . After graduating , she became a Death Eater and became of the most loyal servant of Voldemort",
+                "secondText": "Later , she was emprisonned in Azkaban for life for the torture of Frank and Alice Longbottom but she escaped. After that , she managed to kill her own cousins Sirius Black and Nymphadora Tonks"
 
             },
             "gryffindor": {
                 "title" : "Minerva McGonagall",
-                "description": "Considered by many to be the world's best wandmaker, almost everyone at Hogwarts gets their wands from him"
+                "firstText": "Like a lot wizards and witches before her , she got her wand at Ollivanders before going to Hogwarts where she was sorted in Gryffondor. After her education , she worked two years at the Ministry of Magic until she returned to Hogwarts",
+                "secondText": "Where she became Head of Gryffindor House , Transfiguration professor and sometimes Deputy Headmistress and Headmistress of Hogwarts."
 
             },
             "hufflepuff": {
                 "title" : "Nymphadora Tonks",
-                "description": "Considered by many to be the world's best wandmaker, almost everyone at Hogwarts gets their wands from him"
-
+                "firstText": "Nymphadora Tonks more commonly known as Tonks, occasionally Dora, was a half-blood witch . She was a Metamorphmagus and attended Hogwarts School of Witchcraft and Wizardry where she was Sorted into Hufflepuff House. Later , she married Remus Lupin",
+                "secondText": "After leaving Hogwarts, Tonks joined the Ministry of Magic and trained to become an Auror under the watchful eye of Alastor Moody. Tonks fought in the Battle of Hogwarts and was murdered by Bellatrix Lestrange."
             }
         }
     }

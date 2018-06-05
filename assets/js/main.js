@@ -106,8 +106,7 @@ for (let i = 0; i < dom.houses.length; i++) {
     dom.houses[i].addEventListener('click', function () {
         smoothScroll(dom.story);
         houseStorage(i);
-        appelData();
-        
+        callData();
     });
 }
 
@@ -143,7 +142,7 @@ function hoverOutHouses(goodbye) {
 const dataStory = 'assets/js/textData.json';
 
 
-function appelData() {
+function callData() {
 
 
     fetch(dataStory)
@@ -154,42 +153,66 @@ function appelData() {
             console.log(data);
             if (localStorage.getItem('gender') === 'male' && localStorage.getItem('house') === 'slytherin') {
                 addName(data.gender.man.intro , data.gender.man.slytherin.title);
-                addText(data.gender.man.slytherin.description);
+                firstText(data.gender.man.slytherin.firstText);
+                secondText(data.gender.man.slytherin.secondText);
+                endText();
+                survey();
             } 
             
             else if (localStorage.getItem('gender') === 'male' && localStorage.getItem('house') === 'ravenclaw') {
                 addName(data.gender.man.intro , data.gender.man.ravenclaw.title);
-                addText(data.gender.man.ravenclaw.description);
+                firstText(data.gender.man.ravenclaw.firstText);
+                secondText(data.gender.man.ravenclaw.secondText);
+                endText();
+                survey();
             } 
             
             else if (localStorage.getItem('gender') === 'male' && localStorage.getItem('house') === 'gryffindor') {
                 addName(data.gender.man.intro , data.gender.man.gryffindor.title);
-                addText(data.gender.man.gryffindor.description);
+                firstText(data.gender.man.gryffindor.firstText);
+                secondText(data.gender.man.gryffindor.secondText);
+                endText();
+                survey();
             } 
             
             else if (localStorage.getItem('gender') === 'male' && localStorage.getItem('house') === 'hufflepuff') {
                 addName(data.gender.man.intro , data.gender.man.hufflepuff.title);
-                addText(data.gender.man.hufflepuff.description);
+                firstText(data.gender.man.hufflepuff.firstText);
+                secondText(data.gender.man.hufflepuff.secondText);
+                endText();
+                survey();
             } 
             
             else if (localStorage.getItem('gender') === 'female' && localStorage.getItem('house') === 'slytherin') {
                 addName(data.gender.woman.intro , data.gender.woman.slytherin.title);
-                addText(data.gender.woman.slytherin.description);
+                firstText(data.gender.woman.slytherin.firstText);
+                secondText(data.gender.woman.slytherin.secondText);
+                endText();
+                survey();
             } 
             
             else if (localStorage.getItem('gender') === 'female' && localStorage.getItem('house') === 'ravenclaw') {
                 addName(data.gender.woman.intro , data.gender.woman.ravenclaw.title);
-                addText(data.gender.woman.ravenclaw.description);
+                firstText(data.gender.woman.ravenclaw.firstText);
+                secondText(data.gender.woman.ravenclaw.secondText);
+                endText();
+                survey();
             } 
             
             else if (localStorage.getItem('gender') === 'female' && localStorage.getItem('house') === 'gryffindor') {
                 addName(data.gender.woman.intro , data.gender.woman.gryffindor.title);
-                addText(data.gender.woman.gryffindor.description);
+                firstText(data.gender.woman.gryffindor.firstText);
+                secondText(data.gender.woman.gryffindor.secondText);
+                endText();
+                survey();
             } 
             
             else if (localStorage.getItem('gender') === 'female' && localStorage.getItem('house') === 'hufflepuff') {
                 addName(data.gender.woman.intro , data.gender.woman.hufflepuff.title);
-                addText(data.gender.woman.hufflepuff.description);
+                firstText(data.gender.woman.hufflepuff.firstText);
+                secondText(data.gender.woman.hufflepuff.secondText);
+                endText();
+                survey();
             }
             
         })
@@ -213,13 +236,73 @@ function addName(gender,house) {
     animText();
 }
 
-function addText(descrip){
-    var p = document.createElement('p');
-    p.classList.add('story-content');
-    p.innerHTML = descrip;
-    dom.story.appendChild(p);
+function firstText(descrip){
+    var first = document.createElement('p');
+    first.classList.add('story-firstContent');
+    first.innerHTML = descrip;
+    dom.story.appendChild(first);
     setTimeout(function(){
-        p.style.opacity = '1';
-        document.body.style.overflowY('scroll');
+        first.style.transition = '4s';
+        first.style.opacity = '1';
     }, 8000);
 }
+
+function secondText(descrip){
+    var second = document.createElement('p');
+    second.classList.add('story-secondContent');
+    second.innerHTML = descrip;
+    dom.story.appendChild(second);
+    setTimeout(function(){
+        document.querySelector('.story-firstContent').style.opacity = '0';
+        second.style.transition ='4s';
+        second.style.opacity = '1';
+    }, 16000);
+}
+
+function endText(){
+    var end = document.createElement('p');
+    end.classList.add('story-endText');
+    end.innerHTML = "The End";
+    dom.story.appendChild(end);
+    setTimeout(function(){
+        document.querySelector('.story-secondContent').style.opacity = '0';
+        end.style.transition ='4s';
+        end.style.opacity = '1';
+    }, 24000);
+}
+
+function survey(){
+    var surveyContainer = document.createElement('div');
+    surveyContainer.classList.add('story-surveyContainer');
+    dom.story.appendChild(surveyContainer);
+
+    var survey = document.createElement('h4');
+    survey.classList.add('story-surveyTitle');
+    survey.textContent = "Did you found it interesting ?";
+    surveyContainer.appendChild(survey);
+
+    var buttonYes = document.createElement('a');
+    buttonYes.classList.add('story-surveyButton');
+    buttonYes.href = "index.html";
+    buttonYes.textContent = "Yes";
+    surveyContainer.appendChild(buttonYes);
+
+
+    var buttonNo = document.createElement('a');
+    buttonNo.classList.add('story-surveyButton');
+    buttonNo.href = "index.html";
+    buttonNo.textContent = "No";
+    surveyContainer.appendChild(buttonNo);
+
+    buttonYes.addEventListener('click',function(){
+        
+    })
+
+
+    setTimeout(function(){
+        document.querySelector('.story-endText').style.opacity = '0';
+        surveyContainer.style.transition = "4s";
+        surveyContainer.style.opacity = "1";
+    }, 30000);
+}
+
