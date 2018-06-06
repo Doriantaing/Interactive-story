@@ -1,7 +1,13 @@
 # Interactive Story About Harry Potter
 
-### First Choose a gender 
+### First 
 
-### Second Choose a house
+-- Choose a gender
 
-### Third Read the story of the character 
+### Second 
+
+-- Choose a house
+
+### Third 
+
+-- Read the story of the character 
