@@ -22,15 +22,17 @@ function smoothScroll(section) {
 
 // Button Start 
 
-dom.buttonStart.addEventListener('click', function () {
+dom.buttonStart.addEventListener('click', function(){
+    firstPageAnim();
+}); 
+
+function firstPageAnim(){
     document.querySelector('.firstPage-container').style.animation = "opacity 2s forwards";
     dom.broom.style.transform = "rotate(-20deg) translateX(1500px)";
     setTimeout(function () {
         smoothScroll(dom.gender);
     }, 2000);
-});
-
-
+}
 
 
 
@@ -149,7 +151,7 @@ function callData() {
         .then(function (response) {
             return response.json();
         })
-        .then(function (data) {
+        .then(function(data) {
             console.log(data);
             if (localStorage.getItem('gender') === 'male' && localStorage.getItem('house') === 'slytherin') {
                 addName(data.gender.man.intro , data.gender.man.slytherin.title);
@@ -157,7 +159,7 @@ function callData() {
                 secondText(data.gender.man.slytherin.secondText);
                 endText();
                 survey();
-
+        
             } 
             
             else if (localStorage.getItem('gender') === 'male' && localStorage.getItem('house') === 'ravenclaw') {
@@ -215,9 +217,9 @@ function callData() {
                 endText();
                 survey();
             }
-            
         })
 }
+
 
 function animText(){
    dom.storyTitle.style.animation = 'opacity2 8s';
