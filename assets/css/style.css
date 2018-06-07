@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "harry p";
+  src: url("../assets/fonts/harry_p/HARRYP.TTF"); }
+@font-face {
+  font-family: "new";
+  src: url("../assets/fonts/lumos/lumos.TTF"); }
+@font-face {
+  font-family: "chesterfield";
+  src: url("../assets/fonts/ChesterfieldLTStd.otf"); }
 body {
   overflow: hidden; }
 
@@ -105,7 +114,7 @@ body {
   .story-title {
     text-align: center;
     font-size: 70px;
-    font-family: 'chesterfield LT Std Antique';
+    font-family: 'chesterfield';
     padding-top: 300px; }
   .story-hero {
     text-align: center;
@@ -122,7 +131,7 @@ body {
     transition: 1s;
     opacity: 0;
     font-size: 50px;
-    font-family: 'chesterfield LT Std Antique';
+    font-family: 'chesterfield';
     text-align: center;
     line-height: 100px;
     letter-spacing: 4px; }
