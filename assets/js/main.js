@@ -9,6 +9,7 @@ var dom = {
     story: document.querySelector('.story'),
     storyContainer: document.querySelector('.story-container'),
     storyTitle: document.querySelector('.story-title'),
+    music: document.querySelector('.backgroundMusic')
 }
 
 
@@ -109,6 +110,8 @@ for (let i = 0; i < dom.houses.length; i++) {
         smoothScroll(dom.story);
         houseStorage(i);
         callData();
+        dom.music.src = 'assets/HarrySoundtrack/LeavingHogwarts.mp3';
+        console.log(dom.music);
     });
 }
 
